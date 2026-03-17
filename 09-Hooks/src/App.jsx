@@ -1,17 +1,26 @@
+
 import React, { useState } from 'react'
 
 const App = () => {
 
-  const [num, setNum] = useState(20);
+  const [num, setNum] = useState(0)
 
-  function changeNum(){
-    setNum(30)
+  function increaseNum() {
+    setNum(num+1)
+  }
+  function decreaseNum() {
+    setNum(num-1)
+  }
+  function jump5Num() {
+    setNum(num+5)
   }
 
   return (
     <div>
-      <h1>Value of num is {num} </h1>
-      <button onClick={changeNum}>Click</button>
+      <h1>{num}</h1>
+      <button onClick={increaseNum}>increase</button>
+      <button onClick={decreaseNum}>decrease</button>
+      <button onClick={jump5Num}>Increas by 5</button>
     </div>
   )
 }

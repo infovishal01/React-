@@ -6,6 +6,7 @@ const App = () => {
   }
   return (
     <div>
+      <h1>Value of num is  {num} <br/> value of user is { users} </h1>
       <button onClick={btnClicked}>Click</button>
     </div>
   )
